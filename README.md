@@ -22,6 +22,36 @@ This repository serves as my **learning logbook** - documenting my complete jour
 
 This approach helped me understand that learning to code isn't just about memorizing syntax - it's about applying concepts to solve real problems and building working applications.
 
+## Quick Navigation
+
+| Project | Core Concept | Live Demo | Code |
+|---------|--------------|-----------|------|
+| 1. Pyramid Generator | JavaScript Fundamentals | - | [Code](./01-pyramid-generator/) |
+| 2. Gradebook App | Functions & Variables | - | [Code](./02-gradebook-app/) |
+| 3. Role Playing Game | Objects & Arrays | - | [Code](./03-role-playing-game/) |
+| 4. Random Background Color Changer | Debugging | [Demo](https://swe-robertkibet.github.io/javascript-dsa-playground/04-random-background/) | [Code](./04-random-background/) |
+| 5. Calorie Counter | Form Validation | [Demo](https://swe-robertkibet.github.io/javascript-dsa-playground/05-calorie-counter/) | [Code](./05-calorie-counter/) |
+| 6. Rock Paper Scissors Game | DOM Manipulation | [Demo](https://swe-robertkibet.github.io/javascript-dsa-playground/06-rock-paper-scissors/) | [Code](./06-rock-paper-scissors/) |
+| 7. Music Player | Array Methods | [Demo](https://swe-robertkibet.github.io/javascript-dsa-playground/07-music-player/) | [Code](./07-music-player/) |
+| 8. Palindrome Checker | String Manipulation | [Demo](https://swe-robertkibet.github.io/javascript-dsa-playground/08-palindrome-checker/) | [Code](./08-palindrome-checker/) |
+| 9. Date Formatter | Date Object | [Demo](https://swe-robertkibet.github.io/javascript-dsa-playground/09-date-formatter/) | [Code](./09-date-formatter/) |
+| 10. Football Team Cards | Modern JavaScript | [Demo](https://swe-robertkibet.github.io/javascript-dsa-playground/10-football-team-cards/) | [Code](./10-football-team-cards/) |
+| 11. Todo App | localStorage | [Demo](https://swe-robertkibet.github.io/javascript-dsa-playground/11-todo-app/) | [Code](./11-todo-app/) |
+| 12. Decimal to Binary Converter | Recursion | [Demo](https://swe-robertkibet.github.io/javascript-dsa-playground/12-decimal-to-binary/) | [Code](./12-decimal-to-binary/) |
+| 13. Roman Numeral Converter | Number Systems | [Demo](https://swe-robertkibet.github.io/javascript-dsa-playground/13-roman-numeral-converter/) | [Code](./13-roman-numeral-converter/) |
+| 14. Spam Filter | Regular Expressions | [Demo](https://swe-robertkibet.github.io/javascript-dsa-playground/14-spam-filter/) | [Code](./14-spam-filter/) |
+| 15. Number Sorter | Sorting Algorithms | [Demo](https://swe-robertkibet.github.io/javascript-dsa-playground/15-number-sorter/) | [Code](./15-number-sorter/) |
+| 16. Statistics Calculator | Advanced Array Methods | [Demo](https://swe-robertkibet.github.io/javascript-dsa-playground/16-statistics-calculator/) | [Code](./16-statistics-calculator/) |
+| 17. Spreadsheet | Functional Programming | [Demo](https://swe-robertkibet.github.io/javascript-dsa-playground/17-spreadsheet/) | [Code](./17-spreadsheet/) |
+| 18. Telephone Number Validator | Pattern Matching | [Demo](https://swe-robertkibet.github.io/javascript-dsa-playground/18-telephone-validator/) | [Code](./18-telephone-validator/) |
+| 19. Shopping Cart | Basic OOP | [Demo](https://swe-robertkibet.github.io/javascript-dsa-playground/19-shopping-cart/) | [Code](./19-shopping-cart/) |
+| 20. Platformer Game | Intermediate OOP | [Demo](https://swe-robertkibet.github.io/javascript-dsa-playground/20-platformer-game/) | [Code](./20-platformer-game/) |
+| 21. Dice Game | Algorithmic Thinking | [Demo](https://swe-robertkibet.github.io/javascript-dsa-playground/21-dice-game/) | [Code](./21-dice-game/) |
+| 22. Cash Register | Business Logic | [Demo](https://swe-robertkibet.github.io/javascript-dsa-playground/22-cash-register/) | [Code](./22-cash-register/) |
+| 23. fCC Authors Page | Fetch & Promises | [Demo](https://swe-robertkibet.github.io/javascript-dsa-playground/23-authors-page/) | [Code](./23-authors-page/) |
+| 24. Forum Leaderboard | Asynchronous Programming | [Demo](https://swe-robertkibet.github.io/javascript-dsa-playground/24-leaderboard/) | [Code](./24-leaderboard/) |
+| 25. RPG Creature Search App | API Integration | [Demo](https://swe-robertkibet.github.io/javascript-dsa-playground/25-rpg-creature-search/) | [Code](./25-rpg-creature-search/) |
+
 ## Projects
 
 ## 1. Learn Introductory JavaScript by Building a Pyramid Generator
