@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Palindrome Checker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="palindrome-icon">🔄</div>
+      <h1>Palindrome Checker</h1>
+      <p class="subtitle">
+        Enter a word or phrase to check if it's a palindrome
+      </p>
+
+      <div class="input-group">
+        <input
+          type="text"
+          id="text-input"
+          placeholder="Enter text here..."
+          autocomplete="off"
+        />
+      </div>
+
+      <button id="check-btn">Check Palindrome</button>
+
+      <div id="result" class="result-hidden"></div>
+
+      <div class="examples">
+        <h3>Examples of Palindromes:</h3>
+        <ul>
+          <li>
+            <strong>racecar</strong> - reads the same forwards and backwards
+          </li>
+          <li>
+            <strong>A man, a plan, a canal: Panama</strong> - ignores
+            punctuation and spaces
+          </li>
+          <li><strong>Madam</strong> - ignores case differences</li>
+          <li>
+            <strong>0_0 (: /-\ :) 0-0</strong> - works with numbers and symbols
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

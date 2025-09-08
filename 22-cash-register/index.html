@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cash Register</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(
+          135deg,
+          #2d5016 0%,
+          #486b00 50%,
+          #5b8300 100%
+        );
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .container {
+        background: white;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        max-width: 700px;
+        width: 100%;
+        text-align: center;
+      }
+
+      .cash-icon {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        color: #486b00;
+      }
+
+      h1 {
+        color: #333;
+        margin-bottom: 10px;
+        font-size: 2.5rem;
+        font-weight: 700;
+      }
+
+      .subtitle {
+        color: #666;
+        margin-bottom: 30px;
+        font-size: 1.1rem;
+      }
+
+      .register-display {
+        background: #1a1a1a;
+        color: #00ff00;
+        padding: 20px;
+        border-radius: 12px;
+        margin-bottom: 30px;
+        font-family: "Courier New", monospace;
+        font-size: 1.5rem;
+        border: 3px solid #486b00;
+      }
+
+      .price-display {
+        margin-bottom: 15px;
+      }
+
+      .price-label {
+        color: #00ff00;
+        font-size: 1rem;
+      }
+
+      .price-value {
+        font-size: 2rem;
+        font-weight: bold;
+      }
+
+      .input-section {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 15px;
+        margin-bottom: 25px;
+        align-items: center;
+      }
+
+      #cash {
+        padding: 15px 20px;
+        font-size: 1.3rem;
+        border: 2px solid #e1e5e9;
+        border-radius: 12px;
+        outline: none;
+        transition: all 0.3s ease;
+        font-family: "Courier New", monospace;
+        text-align: center;
+        background: #f8f9fa;
+      }
+
+      #cash:focus {
+        border-color: #486b00;
+        box-shadow: 0 0 0 3px rgba(72, 107, 0, 0.1);
+        transform: translateY(-2px);
+        background: white;
+      }
+
+      #purchase-btn {
+        background: linear-gradient(135deg, #486b00 0%, #5b8300 100%);
+        color: white;
+        border: none;
+        padding: 15px 30px;
+        font-size: 1.2rem;
+        font-weight: 600;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(72, 107, 0, 0.3);
+        min-width: 150px;
+      }
+
+      #purchase-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(72, 107, 0, 0.4);
+      }
+
+      #purchase-btn:active {
+        transform: translateY(-1px);
+      }
+
+      #change-due {
+        min-height: 80px;
+        padding: 20px;
+        border-radius: 12px;
+        font-size: 1.2rem;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid #f0f0f0;
+        background: #f8f9fa;
+        color: #666;
+        transition: all 0.3s ease;
+        font-family: "Courier New", monospace;
+        text-align: center;
+        line-height: 1.4;
+      }
+
+      .change-open {
+        background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        color: white;
+        border-color: #10b981;
+      }
+
+      .change-closed {
+        background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+        color: white;
+        border-color: #f59e0b;
+      }
+
+      .change-insufficient {
+        background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+        color: white;
+        border-color: #ef4444;
+      }
+
+      .change-exact {
+        background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+        color: white;
+        border-color: #3b82f6;
+      }
+
+      .drawer-display {
+        margin-top: 30px;
+        text-align: left;
+        background: #f8f9fa;
+        padding: 25px;
+        border-radius: 12px;
+      }
+
+      .drawer-display h3 {
+        color: #333;
+        margin-bottom: 20px;
+        font-size: 1.3rem;
+        text-align: center;
+      }
+
+      .drawer-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 15px;
+      }
+
+      .denomination {
+        background: white;
+        padding: 15px;
+        border-radius: 8px;
+        border-left: 4px solid #486b00;
+        text-align: center;
+      }
+
+      .denom-name {
+        font-weight: 600;
+        color: #486b00;
+        font-size: 0.9rem;
+        margin-bottom: 5px;
+      }
+
+      .denom-amount {
+        font-family: "Courier New", monospace;
+        font-size: 1.1rem;
+        color: #333;
+        font-weight: 500;
+      }
+
+      .instructions {
+        margin-top: 25px;
+        padding: 20px;
+        background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+        border-radius: 12px;
+        border: 1px solid #486b00;
+      }
+
+      .instructions h4 {
+        color: #486b00;
+        margin-bottom: 15px;
+        font-size: 1.1rem;
+      }
+
+      .instructions ul {
+        text-align: left;
+        color: #374151;
+        line-height: 1.6;
+      }
+
+      .instructions li {
+        margin-bottom: 8px;
+      }
+
+      @media (max-width: 600px) {
+        .container {
+          padding: 30px 20px;
+        }
+
+        h1 {
+          font-size: 2rem;
+        }
+
+        .input-section {
+          grid-template-columns: 1fr;
+          gap: 15px;
+        }
+
+        #purchase-btn {
+          width: 100%;
+        }
+
+        .drawer-grid {
+          grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+          gap: 10px;
+        }
+
+        .register-display {
+          padding: 15px;
+          font-size: 1.2rem;
+        }
+
+        .price-value {
+          font-size: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="cash-icon">💰</div>
+      <h1>Cash Register</h1>
+      <p class="subtitle">Enter payment amount and process the transaction</p>
+
+      <div class="register-display">
+        <div class="price-display">
+          <div class="price-label">TOTAL PRICE</div>
+          <div class="price-value">$<span id="price-display">1.87</span></div>
+        </div>
+      </div>
+
+      <div class="input-section">
+        <input
+          type="number"
+          id="cash"
+          placeholder="Enter cash amount..."
+          step="0.01"
+          min="0"
+          autocomplete="off"
+        />
+        <button id="purchase-btn">Purchase</button>
+      </div>
+
+      <div id="change-due">Enter cash amount and click Purchase</div>
+
+      <div class="drawer-display">
+        <h3>Cash in Drawer</h3>
+        <div class="drawer-grid">
+          <div class="denomination">
+            <div class="denom-name">PENNY</div>
+            <div class="denom-amount">$1.01</div>
+          </div>
+          <div class="denomination">
+            <div class="denom-name">NICKEL</div>
+            <div class="denom-amount">$2.05</div>
+          </div>
+          <div class="denomination">
+            <div class="denom-name">DIME</div>
+            <div class="denom-amount">$3.10</div>
+          </div>
+          <div class="denomination">
+            <div class="denom-name">QUARTER</div>
+            <div class="denom-amount">$4.25</div>
+          </div>
+          <div class="denomination">
+            <div class="denom-name">ONE</div>
+            <div class="denom-amount">$90.00</div>
+          </div>
+          <div class="denomination">
+            <div class="denom-name">FIVE</div>
+            <div class="denom-amount">$55.00</div>
+          </div>
+          <div class="denomination">
+            <div class="denom-name">TEN</div>
+            <div class="denom-amount">$20.00</div>
+          </div>
+          <div class="denomination">
+            <div class="denom-name">TWENTY</div>
+            <div class="denom-amount">$60.00</div>
+          </div>
+          <div class="denomination">
+            <div class="denom-name">ONE HUNDRED</div>
+            <div class="denom-amount">$100.00</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="instructions">
+        <h4>How it works:</h4>
+        <ul>
+          <li><strong>OPEN:</strong> Drawer has enough to make exact change</li>
+          <li>
+            <strong>CLOSED:</strong> Drawer amount equals change due exactly
+          </li>
+          <li><strong>INSUFFICIENT_FUNDS:</strong> Cannot make exact change</li>
+          <li>Change is returned in highest to lowest denomination order</li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
